@@ -50,6 +50,15 @@ add_action('customize_register', 'spa_manager_customize_register');
 function spa_manager_custom_styles() {
     $background_color = get_theme_mod('background_color', '#ffffff');
     $text_color = get_theme_mod('text_color', '#000000');
+
+    // Asegurar que el color tenga el carácter #
+    if (strpos($background_color, '#') !== 0) {
+        $background_color = '#' . $background_color;
+    }
+    if (strpos($text_color, '#') !== 0) {
+        $text_color = '#' . $text_color;
+    }
+
     echo "<style>
         body {
             background-color: {$background_color};
