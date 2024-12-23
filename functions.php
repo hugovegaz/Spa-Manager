@@ -14,7 +14,6 @@ function spa_manager_setup() {
     ));
 }
 add_action('after_setup_theme', 'spa_manager_setup');
-?>
 // Añadir opciones al Customizer
 function spa_manager_customize_register($wp_customize) {
     // Sección de Colores
@@ -59,3 +58,4 @@ function spa_manager_custom_styles() {
     </style>";
 }
 add_action('wp_head', 'spa_manager_custom_styles');
+?>
